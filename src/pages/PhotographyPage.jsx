@@ -87,34 +87,34 @@ const PhotographyPage = () => {
       location: "Mocksville, NC",
       date: "April 2024",
     },
-    {
-      id: 4,
-      title: "Street Life",
-      src: "/src/assets/img/street.jpg",
-      description:
-        "Documenting authentic moments of daily life on city streets.",
-      camera: "Leica Q2",
-      location: "New York, NY",
-      date: "March 2024",
-    },
-    {
-      id: 5,
-      title: "Macro World",
-      src: "/src/assets/img/macro.jpg",
-      description: "Revealing the intricate details of a small flower.",
-      camera: "Canon EOS 90D",
-      location: "Home Garden",
-      date: "July 2024",
-    },
-    {
-      id: 6,
-      title: "Portrait Study",
-      src: "/src/assets/img/portrait.jpg",
-      description: "Exploring emotion and character through portraiture.",
-      camera: "Nikon Z7 II",
-      location: "Studio",
-      date: "February 2024",
-    },
+    // {
+    //   id: 4,
+    //   title: "Street Life",
+    //   src: "/src/assets/img/street.jpg",
+    //   description:
+    //     "Documenting authentic moments of daily life on city streets.",
+    //   camera: "Leica Q2",
+    //   location: "New York, NY",
+    //   date: "March 2024",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Macro World",
+    //   src: "/src/assets/img/macro.jpg",
+    //   description: "Revealing the intricate details of a small flower.",
+    //   camera: "Canon EOS 90D",
+    //   location: "Home Garden",
+    //   date: "July 2024",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Portrait Study",
+    //   src: "/src/assets/img/portrait.jpg",
+    //   description: "Exploring emotion and character through portraiture.",
+    //   camera: "Nikon Z7 II",
+    //   location: "Studio",
+    //   date: "February 2024",
+    // },
   ];
 
   return (
