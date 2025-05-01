@@ -16,7 +16,7 @@ const AboutPage = () => {
             <div className="about-intro">
               <p className="intro-text">
                 I'm a self-taught <span className="name">web developer</span>{" "}
-                and aspiri g <span className="name">UX designer</span>{" "}
+                and aspiring <span className="name">UX designer</span>{" "}
                 passionate about creating engaging digital experiences. My
                 background spans various creative disciplines including music
                 production, horticulture, and filmmaking, which gives me a
