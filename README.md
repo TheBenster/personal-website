@@ -1,13 +1,19 @@
-# React + Vite
+# Personal Website for my Developer Journey
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site Link: https://benbeaver.dev
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Pages
+Includes Home, About page, Portfolio, and Contact which is pretty bare but will be updated to fit what is applicable for projects
 
-## Expanding the ESLint configuration
+## Eventual Updates
+At some point I will incorporate a blog, at the moment I just used object notation and a generated template. Obviously this won't suffice, so the next step is Authorization and a baseline content management system.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# personal-website
+### Scale
+Given the fact that I've had the privilege to learn Express.JS but haven't used it much recently, I think the most likely progression is to meld Express/Node into this.
+
+### DNS, and Deployment Experimentation
+I've been able to learn a lot about a recent progress (one that is displayed on my website.) This turned out to be motivating to me because I recently how cheap it is to deploy my own website, on my own domain, but I find that the way I'm deploying is inefficent, (I have love for you Netlify, but it's likely there is a better way.)
+
+
+
