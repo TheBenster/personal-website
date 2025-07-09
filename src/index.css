@@ -553,10 +553,6 @@ input[type="text"]:focus {
   .intro-text {
     font-size: 1.2rem;
   }
-
-  .portfolio-item.digital {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 900px) {

@@ -93,36 +93,6 @@ const DesignsPage = () => {
       tools: ["Adobe Illustrator", "Figma", "Sketch"],
       link: "https://www.behance.net/gallery/197757327/Farmers-Market-Design",
     },
-    {
-      id: 4,
-      title: "Abstract Composition",
-      category: "Digital Art",
-      description:
-        "Abstract digital composition exploring form, color, and texture in a minimalist style.",
-      image: "/src/assets/portfolio/abstract.jpg",
-      tools: ["Adobe Photoshop", "Procreate"],
-      link: null,
-    },
-    {
-      id: 5,
-      title: "Magazine Layout",
-      category: "Print Design",
-      description:
-        "Editorial design for a cultural magazine, featuring custom typography and visual hierarchy.",
-      image: "/src/assets/portfolio/magazine.jpg",
-      tools: ["Adobe InDesign", "Adobe Illustrator"],
-      link: "https://example.com/magazine",
-    },
-    {
-      id: 6,
-      title: "Motion Graphics Intro",
-      category: "Motion Design",
-      description:
-        "Short animation for a product introduction video, emphasizing brand identity through motion.",
-      image: "/src/assets/portfolio/motion.jpg",
-      tools: ["Adobe After Effects", "Cinema 4D"],
-      link: "https://example.com/motion-intro",
-    },
   ];
 
   const openDesignModal = (design) => {
