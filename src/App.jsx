@@ -9,6 +9,7 @@ import WebsitesPage from "./pages/WebsitesPage";
 import PhotographyPage from "./pages/PhotographyPage";
 import DesignsPage from "./pages/DesignsPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import DataAnalysisPage from "./pages/DataAnalysisPage";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="websites" element={<WebsitesPage />} />
         <Route path="photography" element={<PhotographyPage />} />
         <Route path="designs" element={<DesignsPage />} />
+        <Route path="data-analysis" element={<DataAnalysisPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

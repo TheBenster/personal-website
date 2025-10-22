@@ -1,0 +1,121 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0f172a"/>
+
+  <!-- Grid background -->
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+
+    <linearGradient id="screenGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#grid)"/>
+
+  <!-- Browser Window -->
+  <g id="browser">
+    <!-- Window frame -->
+    <rect x="100" y="80" width="600" height="440" rx="12" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+
+    <!-- Browser top bar -->
+    <rect x="100" y="80" width="600" height="40" rx="12" fill="#0f172a"/>
+    <circle cx="125" cy="100" r="6" fill="#ef4444"/>
+    <circle cx="150" cy="100" r="6" fill="#f59e0b"/>
+    <circle cx="175" cy="100" r="6" fill="#10b981"/>
+
+    <!-- URL bar -->
+    <rect x="210" y="90" width="350" height="20" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="220" y="105" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">https://your-portfolio.com</text>
+
+    <!-- Lock icon -->
+    <circle cx="575" cy="100" r="6" fill="none" stroke="#10b981" stroke-width="1.5"/>
+    <rect x="573" y="102" width="4" height="3" fill="#10b981"/>
+  </g>
+
+  <!-- Website Content -->
+  <g id="content">
+    <!-- Hero Section -->
+    <rect x="120" y="140" width="560" height="120" rx="8" fill="rgba(96, 165, 250, 0.05)" stroke="#334155" stroke-width="1"/>
+    <text x="400" y="180" font-family="'Inter', sans-serif" font-size="32" font-weight="700" fill="#60a5fa" text-anchor="middle">Modern Web Apps</text>
+    <text x="400" y="210" font-family="'Inter', sans-serif" font-size="16" fill="#94a3b8" text-anchor="middle">Built with React • Fast • Responsive</text>
+
+    <!-- CTA Button -->
+    <rect x="340" y="225" width="120" height="30" rx="6" fill="#60a5fa"/>
+    <text x="400" y="245" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="white" text-anchor="middle">View Projects</text>
+  </g>
+
+  <!-- Component Cards -->
+  <g id="cards">
+    <!-- Card 1 -->
+    <rect x="140" y="290" width="160" height="200" rx="8" fill="rgba(30, 41, 59, 0.8)" stroke="#334155" stroke-width="1"/>
+    <rect x="140" y="290" width="160" height="100" rx="8" fill="rgba(96, 165, 250, 0.1)"/>
+
+    <!-- React component icon -->
+    <circle cx="220" cy="330" r="25" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <ellipse cx="220" cy="330" rx="8" ry="25" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <ellipse cx="220" cy="330" rx="25" ry="8" fill="none" stroke="#60a5fa" stroke-width="2"/>
+    <circle cx="220" cy="330" r="4" fill="#60a5fa"/>
+
+    <text x="150" y="410" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#e2e8f0">E-commerce</text>
+    <text x="150" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">Shopping cart & checkout</text>
+    <text x="150" y="445" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">Product management</text>
+
+    <!-- Tech badges -->
+    <rect x="150" y="460" width="50" height="18" rx="9" fill="rgba(96, 165, 250, 0.2)"/>
+    <text x="175" y="472" font-family="'Inter', sans-serif" font-size="10" fill="#60a5fa" text-anchor="middle">React</text>
+
+    <!-- Card 2 -->
+    <rect x="320" y="290" width="160" height="200" rx="8" fill="rgba(30, 41, 59, 0.8)" stroke="#334155" stroke-width="1"/>
+    <rect x="320" y="290" width="160" height="100" rx="8" fill="rgba(139, 92, 246, 0.1)"/>
+
+    <!-- Document icon -->
+    <rect x="380" y="310" width="40" height="50" rx="4" fill="none" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="388" y1="325" x2="412" y2="325" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="388" y1="335" x2="412" y2="335" stroke="#8b5cf6" stroke-width="2"/>
+    <line x1="388" y1="345" x2="408" y2="345" stroke="#8b5cf6" stroke-width="2"/>
+
+    <text x="330" y="410" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#e2e8f0">Resume Builder</text>
+    <text x="330" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">Live preview & export</text>
+    <text x="330" y="445" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">State management</text>
+
+    <rect x="330" y="460" width="50" height="18" rx="9" fill="rgba(139, 92, 246, 0.2)"/>
+    <text x="355" y="472" font-family="'Inter', sans-serif" font-size="10" fill="#8b5cf6" text-anchor="middle">React</text>
+
+    <!-- Card 3 -->
+    <rect x="500" y="290" width="160" height="200" rx="8" fill="rgba(30, 41, 59, 0.8)" stroke="#334155" stroke-width="1"/>
+    <rect x="500" y="290" width="160" height="100" rx="8" fill="rgba(236, 72, 153, 0.1)"/>
+
+    <!-- Website icon -->
+    <rect x="560" y="315" width="40" height="30" rx="4" fill="none" stroke="#ec4899" stroke-width="2"/>
+    <line x1="560" y1="325" x2="600" y2="325" stroke="#ec4899" stroke-width="2"/>
+    <circle cx="568" cy="318" r="2" fill="#ec4899"/>
+    <circle cx="575" cy="318" r="2" fill="#ec4899"/>
+    <circle cx="582" cy="318" r="2" fill="#ec4899"/>
+
+    <text x="510" y="410" font-family="'Inter', sans-serif" font-size="16" font-weight="600" fill="#e2e8f0">Business Site</text>
+    <text x="510" y="430" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">Professional design</text>
+    <text x="510" y="445" font-family="'Inter', sans-serif" font-size="11" fill="#64748b">SEO optimized</text>
+
+    <rect x="510" y="460" width="45" height="18" rx="9" fill="rgba(236, 72, 153, 0.2)"/>
+    <text x="532" y="472" font-family="'Inter', sans-serif" font-size="10" fill="#ec4899" text-anchor="middle">React</text>
+  </g>
+
+  <!-- Code snippet decoration -->
+  <g id="code" opacity="0.3">
+    <text x="120" y="510" font-family="'Courier New', monospace" font-size="11" fill="#60a5fa">&lt;App&gt;</text>
+    <text x="140" y="525" font-family="'Courier New', monospace" font-size="11" fill="#8b5cf6">  &lt;Router /&gt;</text>
+    <text x="120" y="540" font-family="'Courier New', monospace" font-size="11" fill="#60a5fa">&lt;/App&gt;</text>
+  </g>
+
+  <!-- Glow effect -->
+  <rect x="100" y="80" width="600" height="100" fill="url(#screenGlow)" opacity="0.5"/>
+
+  <!-- Decorative dots -->
+  <circle cx="750" cy="100" r="3" fill="#60a5fa" opacity="0.6"/>
+  <circle cx="730" cy="550" r="3" fill="#8b5cf6" opacity="0.5"/>
+  <circle cx="70" cy="300" r="2" fill="#ec4899" opacity="0.5"/>
+</svg>

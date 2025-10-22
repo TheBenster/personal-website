@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/design-page.css";
 
 const DesignProject = ({ design, onClick }) => {
   return (

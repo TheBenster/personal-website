@@ -1,0 +1,330 @@
+/* Designs Page Styles */
+.designs-page {
+  background-color: var(--primary-bg);
+  min-height: 100vh;
+  padding: 2rem 0;
+  color: var(--text-color);
+}
+
+.designs-page .home.websites {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.page-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.page-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Design Projects Grid */
+.design-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.design-project {
+  position: relative;
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.design-project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.design-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.design-project:hover .design-image {
+  transform: scale(1.05);
+}
+
+.design-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
+  color: white;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.design-project:hover .design-overlay {
+  transform: translateY(0);
+}
+
+.design-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.design-category {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Modal Styles */
+.design-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.design-modal-content {
+  background-color: var(--secondary-bg);
+  border-radius: 12px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.design-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background-color 0.3s ease;
+}
+
+.design-modal-close:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.design-modal-image {
+  width: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+  background-color: var(--primary-bg);
+}
+
+.design-modal-info {
+  padding: 2rem;
+  color: var(--text-color);
+}
+
+.design-modal-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.design-modal-category {
+  font-size: 1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.design-modal-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.design-modal-tools {
+  margin-bottom: 1.5rem;
+}
+
+.design-modal-tools h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.design-modal-tools ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.design-modal-tools li {
+  background-color: var(--primary-bg);
+  color: var(--text-color);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  border: 1px solid var(--accent-color);
+}
+
+.design-modal-link {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: var(--primary-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.design-modal-link:hover {
+  background-color: var(--dark-accent);
+  color: var(--text-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .designs-page .home.websites {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .design-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .design-project {
+    margin-bottom: 1rem;
+  }
+
+  .design-image {
+    height: 200px;
+  }
+
+  .design-overlay {
+    transform: translateY(0);
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.7) 70%,
+      transparent 100%
+    );
+  }
+
+  .design-modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .design-modal-info {
+    padding: 1rem;
+  }
+
+  .design-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .design-modal-description {
+    font-size: 1rem;
+  }
+
+  .design-modal-tools ul {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .design-modal-tools li {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .design-projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .design-modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+
+  .design-modal-image {
+    max-height: 50vh;
+  }
+}
