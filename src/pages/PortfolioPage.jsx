@@ -62,14 +62,14 @@ const PortfolioPage = () => {
       technologies: ["Python", "Pandas", "Plotly", "Jupyter"],
     },
     {
-      title: "Web Applications",
+      title: "Web Development",
       description:
-        "Full-stack web applications built with modern technologies, featuring responsive design and interactive user experiences.",
-      imageUrl: "/img/web-apps-preview.svg",
+        "Client websites built with modern technologies, featuring responsive design and interactive user experiences.",
+      imageUrl: "/img/awrightchoice.png",
       linkTo: "/websites",
-      altText: "Web application projects",
+      altText: "Web development projects",
       className: "web-apps",
-      technologies: ["React", "Node.js", "CSS", "JavaScript"],
+      technologies: ["React", "CSS", "JavaScript", "Netlify"],
     },
     {
       title: "Photography Portfolio",
