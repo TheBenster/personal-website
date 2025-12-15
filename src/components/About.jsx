@@ -1,4 +1,3 @@
-import React from "react";
 
 const About = () => {
   return (
@@ -14,14 +13,14 @@ const About = () => {
           </div>
           <div className="about-intro">
             <p className="intro-text">
-              Hello! I am a digital media student at Davidson Davie Community
-              College currently getting my associates, apart from that I am
-              teaching myself the ins and outs of
-              <span className="name"> web development </span>
-              and <span className="name"> user experience design. </span>
+              Hello! I'm a digital media student at Davidson Davie Community
+              College studying <span className="name">web development</span> and{" "}
+              <span className="name">UX design</span>. I work as a freelance
+              developer building custom websites and applications.
               <span id="misc">
-                Other miscellaneous activities include music production,
-                horticulture and film making.
+                {" "}
+                Beyond code, I enjoy photography, music production, and
+                filmmaking.
               </span>
             </p>
           </div>

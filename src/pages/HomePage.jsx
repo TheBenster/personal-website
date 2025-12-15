@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
@@ -9,7 +8,7 @@ const HomePage = () => {
           <h1 className="title">
             Hi, I'm <span className="name">Ben</span>
           </h1>
-          <h1 className="position">Data Analyst & Web Developer</h1>
+          <h1 className="position">web developer & designer</h1>
           <Link to="/portfolio" className="link-to">
             <button className="btn">view my work</button>
           </Link>

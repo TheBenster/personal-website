@@ -71,22 +71,6 @@ img {
   color: var(--accent-color);
 }
 
-.nav > a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 50%;
-  background-color: var(--accent-color);
-  transition: all 0.3s;
-  transform: translateX(-50%);
-}
-
-.nav > a:hover::after {
-  width: 70%;
-}
-
 .active {
   color: var(--accent-color);
 }
@@ -143,26 +127,6 @@ img {
 .name {
   color: var(--accent-color);
   font-weight: 500;
-  position: relative;
-  display: inline-block;
-}
-
-.name::after {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.5s ease-out;
-}
-
-.title:hover .name::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
 }
 
 .btn {
@@ -183,13 +147,6 @@ img {
 .btn:hover {
   background-color: var(--accent-color);
   color: var(--dark-accent);
-  transform: translateY(-3px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
-}
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .link-to {
@@ -235,12 +192,7 @@ img {
   max-width: 80%;
   border-radius: 50%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease;
   border: 3px solid var(--accent-color);
-}
-
-.headshot-img:hover {
-  transform: scale(1.05);
 }
 
 .about-intro {
@@ -320,13 +272,6 @@ img {
   background-color: rgba(255, 255, 255, 0.05);
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card-body:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-body i,
@@ -334,12 +279,6 @@ img {
   font-size: 3rem;
   height: 50px;
   width: auto;
-  transition: transform 0.3s ease;
-}
-
-.card-body i:hover,
-.card-body img:hover {
-  transform: scale(1.2);
 }
 
 /* Tech icon tooltips */
@@ -362,126 +301,6 @@ img {
   white-space: nowrap;
   z-index: 10;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Add this to your index.css after the existing about styles */
-
-/* Professional Experience Highlight */
-.experience-highlight {
-  margin: 3rem 0 2rem;
-  padding: 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(96, 165, 250, 0.1),
-    rgba(96, 165, 250, 0.05)
-  );
-  border-radius: 12px;
-  border-left: 4px solid var(--accent-color);
-  position: relative;
-}
-
-.experience-highlight::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, transparent, rgba(96, 165, 250, 0.02));
-  border-radius: 12px;
-  pointer-events: none;
-}
-
-.experience-highlight h3 {
-  color: var(--accent-color);
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  position: relative;
-}
-
-.experience-highlight p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.9);
-  position: relative;
-}
-
-/* Enhanced about-cta to match new professional status */
-.about-cta {
-  margin-top: 3rem;
-  text-align: center;
-  padding: 2rem;
-  background: rgba(96, 165, 250, 0.08);
-  border-radius: 12px;
-  border: 1px solid rgba(96, 165, 250, 0.15);
-  position: relative;
-  overflow: hidden;
-}
-
-.about-cta::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent,
-    rgba(96, 165, 250, 0.05),
-    transparent
-  );
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%) translateY(-100%) rotate(45deg);
-  }
-  100% {
-    transform: translateX(100%) translateY(100%) rotate(45deg);
-  }
-}
-
-.about-cta p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  color: var(--text-color);
-  position: relative;
-  z-index: 1;
-}
-
-.about-cta .btn {
-  position: relative;
-  z-index: 1;
-}
-
-/* Mobile responsiveness for new sections */
-@media screen and (max-width: 900px) {
-  .experience-highlight {
-    margin: 2rem 0 1.5rem;
-    padding: 1.5rem;
-  }
-
-  .experience-highlight h3 {
-    font-size: 1.2rem;
-  }
-
-  .experience-highlight p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .experience-highlight {
-    padding: 1rem;
-    margin: 1.5rem 0 1rem;
-  }
-
-  .experience-highlight h3 {
-    font-size: 1.1rem;
-  }
 }
 
 /* Call to action section */
@@ -532,18 +351,6 @@ img {
   display: inline-block;
 }
 
-.portfolio-header::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -15px;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--dark-accent));
-  border-radius: 2px;
-}
-
 .portfolio-subtitle {
   font-size: 1.2rem;
   color: var(--accent-color);
@@ -583,29 +390,10 @@ img {
 }
 
 .highlight-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid rgba(96, 165, 250, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--accent-color), #3b82f6);
-}
-
-.highlight-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
-  border-color: var(--accent-color);
+  border-left: 4px solid var(--accent-color);
 }
 
 .highlight-header {
@@ -658,23 +446,6 @@ img {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
-
-.portfolio-item.featured-project {
-  grid-column: span 2;
-  background: linear-gradient(
-    135deg,
-    rgba(96, 165, 250, 0.1),
-    rgba(96, 165, 250, 0.05)
-  );
-  border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
 .portfolio-item-header {
@@ -710,11 +481,6 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.portfolio-item:hover .port {
-  transform: scale(1.1);
 }
 
 .portfolio-overlay {
@@ -727,7 +493,7 @@ img {
     to bottom,
     transparent 0%,
     rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.8) 100%
+    rgba(0, 0, 0, 0.7) 100%
   );
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -818,11 +584,7 @@ img {
 .portfolio-cta {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(
-    135deg,
-    rgba(96, 165, 250, 0.1),
-    rgba(96, 165, 250, 0.05)
-  );
+  background: rgba(96, 165, 250, 0.05);
   border-radius: 16px;
   margin: 4rem 0 2rem;
 }
@@ -854,14 +616,12 @@ img {
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .btn.primary:hover {
   background-color: var(--dark-accent);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .btn.secondary {
@@ -871,23 +631,18 @@ img {
   border: 2px solid var(--accent-color);
   border-radius: 8px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   text-decoration: none;
 }
 
 .btn.secondary:hover {
   background-color: rgba(96, 165, 250, 0.1);
-  transform: translateY(-2px);
 }
 
 /* Responsive Design */
 @media screen and (max-width: 1000px) {
-  .portfolio-item.featured-project {
-    grid-column: span 1;
-  }
-
   .portfolio-grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
   }
 }
@@ -898,15 +653,23 @@ img {
   }
 
   .portfolio-hero {
-    padding: 2rem 0 3rem;
+    padding: 1.5rem 0 2rem;
   }
 
   .portfolio-header {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 1rem;
+  }
+
+  .portfolio-intro {
+    font-size: 1rem;
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .portfolio-grid {
@@ -915,6 +678,11 @@ img {
   }
 
   .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .highlights-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -928,6 +696,18 @@ img {
   .btn.secondary {
     width: 100%;
     max-width: 300px;
+  }
+
+  .portfolio-cta {
+    padding: 2rem 1rem;
+  }
+
+  .portfolio-cta h2 {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-cta p {
+    font-size: 1rem;
   }
 }
 
@@ -1040,12 +820,6 @@ input[type="text"]:focus {
 
 .submit-btn:hover {
   background-color: var(--dark-accent);
-  transform: translateY(-3px);
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.15);
-}
-
-.submit-btn:active {
-  transform: translateY(-1px);
 }
 
 /* Socials section */
@@ -1064,15 +838,14 @@ input[type="text"]:focus {
 .social {
   height: 70px;
   width: 70px;
-  transition: all 0.4s ease;
+  transition: opacity 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .social:hover {
-  transform: translateY(-5px) scale(1.1);
-  filter: drop-shadow(0 0 8px rgba(96, 165, 250, 0.5));
+  opacity: 0.7;
 }
 
 /* Media Queries */
@@ -1084,11 +857,16 @@ input[type="text"]:focus {
 
 @media screen and (max-width: 900px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   .position {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1.1rem;
   }
 
   .top-half {
@@ -1107,11 +885,16 @@ input[type="text"]:focus {
   }
 
   .intro-text {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .bottom-half {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .bottom-half h1,
+  .bottom-half h2 {
+    font-size: 1.6rem;
   }
 
   .portfolio-header {
@@ -1121,18 +904,33 @@ input[type="text"]:focus {
 
 @media screen and (max-width: 650px) {
   .about-nav {
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 60px;
+    padding: 0 10px;
   }
 
   .nav {
-    padding: 0 8px;
+    padding: 0 6px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .position {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 1rem;
   }
 
   .portfolio-header {
     display: block;
     text-align: center;
     margin-bottom: 0.5rem;
+    font-size: 1.8rem;
   }
 
   .portfolio-list {
@@ -1141,21 +939,22 @@ input[type="text"]:focus {
 
   .bottom-half h1,
   .bottom-half h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .card-head {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .card-body {
     padding: 1rem;
-    gap: 1.5rem;
+    gap: 1.2rem;
   }
 
   .card-body i,
   .card-body img {
     font-size: 2.5rem;
+    height: 40px;
   }
 
   #misc {
@@ -1180,6 +979,87 @@ input[type="text"]:focus {
 
   .contact {
     padding: 1rem;
+  }
+
+  .about-cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .about-cta p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-nav {
+    font-size: 0.85rem;
+    height: 55px;
+  }
+
+  .nav {
+    padding: 0 5px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .position {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+
+  .portfolio-hero {
+    padding: 1rem 0 1.5rem;
+  }
+
+  .portfolio-header {
+    font-size: 1.6rem;
+  }
+
+  .portfolio-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .professional-highlights,
+  .skills-summary {
+    padding: 1rem 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .highlight-card {
+    padding: 1.5rem;
+  }
+
+  .skill-category {
+    padding: 1.5rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portfolio-cta {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .card-body i,
+  .card-body img {
+    font-size: 2rem;
+    height: 35px;
   }
 }
 

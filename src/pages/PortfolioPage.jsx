@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/portfolio-page.css";
 
@@ -52,16 +51,6 @@ const PortfolioItem = ({
 const PortfolioPage = () => {
   const portfolioItems = [
     {
-      title: "Data Analysis & Visualization",
-      description:
-        "Interactive dashboards and data analysis projects including disaster recovery analytics for Hurricane Helene and various business intelligence solutions.",
-      imageUrl: "/img/data-analysis-preview.svg",
-      linkTo: "/data-analysis",
-      altText: "Data analysis and visualization projects",
-      className: "data-analysis",
-      technologies: ["Python", "Pandas", "Plotly", "Jupyter"],
-    },
-    {
       title: "Web Development",
       description:
         "Client websites built with modern technologies, featuring responsive design and interactive user experiences.",
@@ -70,16 +59,6 @@ const PortfolioPage = () => {
       altText: "Web development projects",
       className: "web-apps",
       technologies: ["React", "CSS", "JavaScript", "Netlify"],
-    },
-    {
-      title: "Photography Portfolio",
-      description:
-        "A curated collection of my photographic work exploring various styles and subjects, showcasing technical and artistic skills.",
-      imageUrl: "/img/temporality_fleeting.JPG",
-      linkTo: "/photography",
-      altText: "Photography portfolio",
-      className: "photography",
-      technologies: ["Canon M50 MkII", "Lightroom", "Photoshop"],
     },
     {
       title: "Design Projects",
@@ -91,6 +70,16 @@ const PortfolioPage = () => {
       className: "design",
       technologies: ["Illustrator", "Figma", "Photoshop"],
     },
+    {
+      title: "Photography Portfolio",
+      description:
+        "A curated collection of my photographic work exploring various styles and subjects.",
+      imageUrl: "/img/temporality_fleeting.JPG",
+      linkTo: "/photography",
+      altText: "Photography portfolio",
+      className: "photography",
+      technologies: ["Canon M50 MkII", "Lightroom", "Photoshop"],
+    },
   ];
 
   const professionalHighlights = [
@@ -98,14 +87,22 @@ const PortfolioPage = () => {
       title: "Data Analyst",
       company: "Tetratech",
       description:
-        "Leading data analysis for Hurricane Helene disaster recovery efforts",
-      period: "2024 - Present",
+        "Working on Hurricane Helene disaster recovery efforts through data analysis and visualization",
+      period: "Dec, 2024 - Dec, 2025",
     },
     {
-      title: "Freelance Developer",
+      title: "Freelance Web Developer",
       company: "Various Clients",
-      description: "Building custom websites and web applications",
+      description:
+        "Building custom websites and web applications with modern technologies",
       period: "2023 - Present",
+    },
+    {
+      title: "Digital Media Student",
+      company: "Davidson Davie Community College",
+      description:
+        "Studying web development, UX design, and digital media production",
+      period: "Present",
     },
   ];
 
@@ -116,12 +113,12 @@ const PortfolioPage = () => {
         <div className="portfolio-hero">
           <h1 className="portfolio-header">Portfolio</h1>
           <p className="portfolio-subtitle">
-            Data Analysis • Web Development • Design • Photography
+            Web Development • Design • Photography
           </p>
           <p className="portfolio-intro">
-            A collection of my professional work as a Data Analyst at Tetratech
-            and freelance web developer, showcasing projects that combine
-            analytical expertise with creative problem-solving.
+            A collection of my work as a freelance web developer and designer,
+            showcasing projects that combine technical skills with creative
+            problem-solving.
           </p>
         </div>
 
@@ -167,30 +164,30 @@ const PortfolioPage = () => {
           <h2 className="section-title">Core Competencies</h2>
           <div className="skills-grid">
             <div className="skill-category">
-              <h3>Data Analysis</h3>
-              <ul>
-                <li>Statistical Analysis</li>
-                <li>Data Visualization</li>
-                <li>Dashboard Creation</li>
-                <li>Disaster Recovery Analytics</li>
-              </ul>
-            </div>
-            <div className="skill-category">
               <h3>Web Development</h3>
               <ul>
-                <li>Full-Stack Development</li>
+                <li>React & JavaScript</li>
                 <li>Responsive Design</li>
-                <li>React Applications</li>
-                <li>Database Integration</li>
+                <li>CSS & Tailwind</li>
+                <li>Node.js & Backend</li>
               </ul>
             </div>
             <div className="skill-category">
-              <h3>Creative Skills</h3>
+              <h3>Design</h3>
               <ul>
                 <li>UI/UX Design</li>
-                <li>Brand Design</li>
+                <li>Brand Identity</li>
+                <li>Figma & Illustrator</li>
+                <li>Visual Design</li>
+              </ul>
+            </div>
+            <div className="skill-category">
+              <h3>Other Skills</h3>
+              <ul>
                 <li>Photography</li>
-                <li>Visual Storytelling</li>
+                <li>Adobe Creative Suite</li>
+                <li>Git & Version Control</li>
+                <li>Web Hosting & Deployment</li>
               </ul>
             </div>
           </div>
@@ -200,8 +197,8 @@ const PortfolioPage = () => {
         <div className="portfolio-cta">
           <h2>Ready to collaborate?</h2>
           <p>
-            Whether you need data analysis, web development, or creative
-            solutions, I'd love to discuss how we can work together.
+            Whether you need a website, design work, or creative solutions, I'd
+            love to discuss how we can work together.
           </p>
           <div className="cta-buttons">
             <Link to="/contact" className="btn primary">
