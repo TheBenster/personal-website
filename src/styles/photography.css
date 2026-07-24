@@ -22,16 +22,6 @@
   position: relative;
 }
 
-.page-title::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  height: 3px;
-  width: 60px;
-  background-color: var(--accent-color);
-}
-
 .page-description {
   font-size: 1.2rem;
   max-width: 800px;

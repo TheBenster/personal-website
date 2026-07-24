@@ -52,7 +52,7 @@
   padding: 0 2rem;
 }
 
-.section-title {
+#portfolio-page .section-title {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2.5rem;
@@ -72,18 +72,6 @@
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.highlight-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--accent-color), #3b82f6);
 }
 
 .highlight-card:hover {
@@ -247,7 +235,7 @@
 }
 
 /* ===== SKILLS SUMMARY SECTION ===== */
-.skills-summary {
+#portfolio-page .skills-summary {
   margin: 0 2rem 5rem;
   padding: 3rem;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(96, 165, 250, 0.05));
@@ -255,40 +243,35 @@
   border: 1px solid rgba(96, 165, 250, 0.2);
 }
 
-.skills-grid {
+#portfolio-page .stack-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
-  padding: 0 1rem;
 }
 
-.skill-category h3 {
+#portfolio-page .stack-block {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.75rem;
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.15);
+}
+
+#portfolio-page .stack-title {
   font-size: 1.3rem;
   color: var(--accent-color);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   font-weight: 600;
 }
 
-.skill-category ul {
-  list-style: none;
-  padding: 0;
+#portfolio-page .stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
-.skill-category li {
-  padding: 0.6rem 0;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 1rem;
-  position: relative;
-  padding-left: 1.5rem;
-}
-
-.skill-category li::before {
-  content: "▸";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
-  font-weight: bold;
+#portfolio-page .stack-icon {
+  font-size: 2.5rem;
 }
 
 /* ===== CALL TO ACTION ===== */
@@ -388,7 +371,7 @@
     font-size: 1rem;
   }
 
-  .section-title {
+  #portfolio-page .section-title {
     font-size: 1.8rem;
   }
 
@@ -411,15 +394,14 @@
     padding: 0;
   }
 
-  .skills-summary {
+  #portfolio-page .skills-summary {
     margin: 0 1rem 3rem;
     padding: 2rem 1.5rem;
   }
 
-  .skills-grid {
+  #portfolio-page .stack-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 0;
+    gap: 1.5rem;
   }
 
   .portfolio-cta {
@@ -462,7 +444,7 @@
     padding: 1.5rem;
   }
 
-  .skills-summary {
+  #portfolio-page .skills-summary {
     margin: 0 0.5rem 2rem;
     padding: 1.5rem 1rem;
   }

@@ -1,16 +1,47 @@
 import React, { useState } from "react";
 import "../styles/contact-page.css";
-// Import your social icons or use Font Awesome/other icon libraries
 
-/*************  ✨ Windsurf Command ⭐  *************/
-/**
- * A page for visitors to send a message to the site owner.
- *
- * Handles form submission logic, including success and error messages.
- *
- * @returns The Contact page component.
- */
-/*******  7b1d2405-91a5-4abe-83b5-265f5ba1ec11  *******/ const ContactPage =
+const Icon = ({ name, className = "" }) => {
+  const icons = {
+    mail: (
+      <>
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m3 7 9 6 9-6" />
+      </>
+    ),
+    mapPin: (
+      <>
+        <path d="M12 21s7-5.3 7-11a7 7 0 0 0-14 0c0 5.7 7 11 7 11Z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </>
+    ),
+    send: (
+      <>
+        <path d="m22 2-7 20-4-9-9-4 20-7Z" />
+        <path d="M22 2 11 13" />
+      </>
+    ),
+  };
+
+  return (
+    <svg
+      aria-hidden="true"
+      className={`contact-icon ${className}`}
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20"
+    >
+      {icons[name]}
+    </svg>
+  );
+};
+
+const ContactPage =
   () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -69,7 +100,7 @@ import "../styles/contact-page.css";
         <div className="contact-page">
           <div className="contact-wrapper">
             <div className="contact-left">
-              <h2 className="headr">Let's Connect</h2>
+              <h2 className="contact-heading">Let's Connect</h2>
               <p className="contact-intro">
                 I'm always open to discussing new projects, creative ideas or
                 opportunities to be part of your vision.
@@ -77,11 +108,11 @@ import "../styles/contact-page.css";
 
               <div className="contact-info">
                 <div className="contact-info-item">
-                  <i className="fas fa-envelope"></i>
+                  <Icon name="mail" />
                   <span>bbeaver@gmail.com</span>
                 </div>
                 <div className="contact-info-item">
-                  <i className="fas fa-map-marker-alt"></i>
+                  <Icon name="mapPin" />
                   <span>Asheville, NC</span>
                 </div>
               </div>
@@ -96,7 +127,7 @@ import "../styles/contact-page.css";
                     className="social-link"
                     aria-label={link.name}
                   >
-                    <img src={link.icon} className={link.icon}></img>
+                    <img src={link.icon} alt="" />
                   </a>
                 ))}
               </div>
@@ -137,7 +168,8 @@ import "../styles/contact-page.css";
                     className="submit-btn"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <Icon name="send" />
+                    <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
                   </button>
                 </div>
 

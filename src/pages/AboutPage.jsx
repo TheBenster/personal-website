@@ -15,85 +15,41 @@ const AboutPage = () => {
             </div>
             <div className="about-intro">
               <p className="intro-text">
-                I'm <span className="name">Ben</span>, a{" "}
-                <span className="name">web developer</span> and{" "}
-                <span className="name">designer</span> passionate about creating
-                clean, functional websites that people enjoy using.
+                I'm a developer and data person near Asheville. I build web
+                apps, write Python automation, and spend most of my time on the
+                gap between technically functional and actually usable by the
+                person who needs it. That gap is most of what the job turns out
+                to be.
               </p>
               <p className="intro-text">
-                I'm currently studying Digital Media at Davidson Davie Community
-                College while working as a freelance developer, building custom
-                websites and web applications for clients. I focus on{" "}
-                <span className="name">responsive design</span> and{" "}
-                <span className="name">user experience</span>, making sure every
-                project works beautifully across all devices.
+                The project I've put the most into: GlyphStack, a Japanese SRS
+                app covering 1,841 kanji, 214 radicals, and vocabulary across
+                212 frequency-ordered sets. I designed the session flow
+                specifically to fix the things that frustrated me about every
+                other SRS tool. It's the kind of thing that starts as a weekend
+                project and becomes the thing you're still refining a year
+                later.
               </p>
               <p className="intro-text">
-                Beyond code, I'm into photography, music production, and
-                filmmaking. This creative background helps me approach web
-                development with an eye for design and attention to detail.
+                Other things about me: I play math rock and midwest emo guitar
+                (about five years, mostly self-taught), make generative art in
+                p5.js when I want to think about something that isn't a bug,
+                study digital media at Davidson-Davie CC, collect Tomokazu
+                Komiya Pokemon cards and rare San Pedro cultivars, and am
+                currently reading East of Eden.
               </p>
             </div>
           </div>
 
           <div className="bottom-half">
-            <h2>My ever-growing tech stack:</h2>
+            <h2>Stack</h2>
 
-            <div className="tech-cards">
-              <div className="card-head">Languages</div>
-              <div className="card-body">
-                <i
-                  className="devicon-javascript-plain colored"
-                  title="JavaScript"
-                ></i>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                  alt="HTML5"
-                  className="tech-icon"
-                  title="HTML5"
-                />
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                  alt="CSS3"
-                  className="tech-icon"
-                  title="CSS3"
-                />
-                <i className="devicon-python-plain colored" title="Python"></i>
-              </div>
-            </div>
-
-            <div className="tech-cards">
-              <div className="card-head">Frontend Development</div>
-              <div className="card-body">
-                <i className="devicon-react-original colored" title="React"></i>
-                <i
-                  className="devicon-tailwindcss-plain colored"
-                  title="Tailwind CSS"
-                ></i>
-                <i className="devicon-sass-original colored" title="Sass"></i>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vite/vite-original.svg"
-                  alt="Vite"
-                  className="tech-icon"
-                  title="Vite"
-                />
-              </div>
-            </div>
-
-            <div className="tech-cards">
-              <div className="card-head">Backend & Tools</div>
-              <div className="card-body">
-                <i className="devicon-nodejs-plain colored" title="Node.js"></i>
-                <i className="devicon-git-plain colored" title="Git"></i>
-                <i className="devicon-github-original" title="GitHub"></i>
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/webpack/webpack-original.svg"
-                  alt="Webpack"
-                  className="tech-icon"
-                  title="Webpack"
-                />
-              </div>
-            </div>
+            <p className="intro-text">
+              I build primarily with React and JavaScript in the browser, Python
+              for automation and data pipelines, and FastAPI when I need a
+              backend. CSS I write by hand: Tailwind when moving fast, Sass when
+              structure matters. For design: Figma and Illustrator.
+            </p>
 
             {/* Call to Action */}
             <div className="about-cta">

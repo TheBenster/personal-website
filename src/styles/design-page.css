@@ -2,70 +2,93 @@
 .designs-page {
   background-color: var(--primary-bg);
   min-height: 100vh;
-  padding: 2rem 0;
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
   color: var(--text-color);
 }
 
 .designs-page .home.websites {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-.page-title {
-  font-size: 2.5rem;
+.design-page-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto clamp(2rem, 5vw, 3.5rem);
+}
+
+.design-page-title {
+  font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 700;
   text-align: center;
   margin-bottom: 1rem;
   color: var(--text-color);
   position: relative;
   display: inline-block;
-  width: 100%;
 }
 
-.page-title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background-color: var(--accent-color);
-}
 
-.page-description {
+.design-page-description {
   font-size: 1.2rem;
   text-align: center;
-  margin-bottom: 3rem;
   color: rgba(255, 255, 255, 0.8);
-  max-width: 600px;
+  max-width: 560px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+}
+
+.design-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-color);
+  font-weight: 700;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+}
+
+.design-icon {
+  flex: 0 0 auto;
 }
 
 /* Design Projects Grid */
 .design-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
+  gap: 1.25rem;
   margin-bottom: 3rem;
 }
 
 .design-project {
+  appearance: none;
   position: relative;
   background-color: var(--secondary-bg);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: inherit;
+  font: inherit;
+  padding: 0;
+  text-align: left;
 }
 
 .design-project:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.design-project:focus-visible,
+.design-modal-close:focus-visible,
+.design-modal-link:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
 }
 
 .design-image {
@@ -84,16 +107,23 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.6) 50%,
-    transparent 100%
-  );
+  background-color: rgba(15, 23, 42, 0.88);
   color: white;
-  padding: 1.5rem;
+  padding: 1rem 1.25rem 1.2rem;
   transform: translateY(100%);
   transition: transform 0.3s ease;
+}
+
+.design-view-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
 
 .design-project:hover .design-overlay {
@@ -132,7 +162,8 @@
 
 .design-modal-content {
   background-color: var(--secondary-bg);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
   max-width: 90vw;
   max-height: 90vh;
   overflow-y: auto;
@@ -149,10 +180,9 @@
   background: rgba(0, 0, 0, 0.5);
   border: none;
   color: white;
-  font-size: 1.5rem;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -173,11 +203,14 @@
 }
 
 .design-modal-info {
-  padding: 2rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
   color: var(--text-color);
 }
 
 .design-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
@@ -204,6 +237,9 @@
 }
 
 .design-modal-tools h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: var(--accent-color);
@@ -220,14 +256,16 @@
 .design-modal-tools li {
   background-color: var(--primary-bg);
   color: var(--text-color);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
   font-size: 0.9rem;
   border: 1px solid var(--accent-color);
 }
 
 .design-modal-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: var(--accent-color);
   color: var(--primary-bg);
   padding: 0.75rem 1.5rem;
@@ -251,13 +289,12 @@
     padding: 1rem;
   }
 
-  .page-title {
+  .design-page-title {
     font-size: 2rem;
   }
 
-  .page-description {
+  .design-page-description {
     font-size: 1rem;
-    margin-bottom: 2rem;
   }
 
   .design-projects-grid {
@@ -275,12 +312,7 @@
 
   .design-overlay {
     transform: translateY(0);
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.7) 70%,
-      transparent 100%
-    );
+    background-color: rgba(15, 23, 42, 0.9);
   }
 
   .design-modal-content {

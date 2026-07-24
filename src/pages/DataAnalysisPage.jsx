@@ -1,13 +1,82 @@
 import React, { useState } from "react";
 import "../styles/data-analysis.css";
 
+const Icon = ({ name, className = "" }) => {
+  const icons = {
+    arrowRight: <path d="M5 12h14m-6-6 6 6-6 6" />,
+    chart: (
+      <>
+        <path d="M3 3v18h18" />
+        <path d="m7 14 4-4 3 3 5-7" />
+      </>
+    ),
+    close: (
+      <>
+        <path d="M18 6 6 18" />
+        <path d="m6 6 12 12" />
+      </>
+    ),
+    database: (
+      <>
+        <ellipse cx="12" cy="5" rx="8" ry="3" />
+        <path d="M4 5v6c0 1.7 3.6 3 8 3s8-1.3 8-3V5" />
+        <path d="M4 11v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6" />
+      </>
+    ),
+    eye: (
+      <>
+        <path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6Z" />
+        <circle cx="12" cy="12" r="3" />
+      </>
+    ),
+    target: (
+      <>
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 2v3m0 14v3m10-10h-3M5 12H2" />
+      </>
+    ),
+    tools: (
+      <>
+        <path d="m14.7 6.3 3 3" />
+        <path d="M3 21 14.7 9.3" />
+        <path d="M15.5 3.5a4 4 0 0 0 5 5L8 21H3v-5L15.5 3.5Z" />
+      </>
+    ),
+  };
+
+  return (
+    <svg
+      aria-hidden="true"
+      className={`data-icon ${className}`}
+      fill="none"
+      height="20"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      viewBox="0 0 24 24"
+      width="20"
+    >
+      {icons[name]}
+    </svg>
+  );
+};
+
 const DataProject = ({ project, onClick }) => {
   return (
-    <div className="data-project" onClick={() => onClick(project)}>
+    <button
+      className="data-project"
+      onClick={() => onClick(project)}
+      type="button"
+    >
       <div className="project-image">
         <img src={project.image} alt={project.title} />
         <div className="project-overlay">
-          <span className="view-details">View Details</span>
+          <span className="view-details">
+            <Icon name="eye" />
+            View Details
+          </span>
         </div>
       </div>
       <div className="project-info">
@@ -22,7 +91,7 @@ const DataProject = ({ project, onClick }) => {
           ))}
         </div>
       </div>
-    </div>
+    </button>
   );
 };
 
@@ -35,8 +104,13 @@ const ProjectModal = ({ project, onClose }) => {
         className="project-modal-content"
         onClick={(e) => e.stopPropagation()}
       >
-        <button className="project-modal-close" onClick={onClose}>
-          ×
+        <button
+          className="project-modal-close"
+          onClick={onClose}
+          type="button"
+          aria-label="Close project details"
+        >
+          <Icon name="close" />
         </button>
 
         <div className="modal-header">
@@ -53,12 +127,18 @@ const ProjectModal = ({ project, onClose }) => {
 
           <div className="modal-details">
             <div className="project-description">
-              <h3>Project Overview</h3>
+              <h3>
+                <Icon name="chart" />
+                Project Overview
+              </h3>
               <p>{project.description}</p>
             </div>
 
             <div className="project-challenges">
-              <h3>Key Challenges</h3>
+              <h3>
+                <Icon name="target" />
+                Key Challenges
+              </h3>
               <ul>
                 {project.challenges.map((challenge, index) => (
                   <li key={index}>{challenge}</li>
@@ -67,7 +147,10 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
 
             <div className="project-solutions">
-              <h3>Solutions & Impact</h3>
+              <h3>
+                <Icon name="arrowRight" />
+                Solutions & Impact
+              </h3>
               <ul>
                 {project.solutions.map((solution, index) => (
                   <li key={index}>{solution}</li>
@@ -76,7 +159,10 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
 
             <div className="project-technologies">
-              <h3>Technologies Used</h3>
+              <h3>
+                <Icon name="tools" />
+                Technologies Used
+              </h3>
               <div className="tech-stack">
                 {project.technologies.map((tech, index) => (
                   <span key={index} className="tech-badge">
@@ -88,7 +174,10 @@ const ProjectModal = ({ project, onClose }) => {
 
             {project.metrics && (
               <div className="project-metrics">
-                <h3>Key Metrics</h3>
+                <h3>
+                  <Icon name="database" />
+                  Key Metrics
+                </h3>
                 <div className="metrics-grid">
                   {project.metrics.map((metric, index) => (
                     <div key={index} className="metric-item">
@@ -180,6 +269,9 @@ const DataAnalysisPage = () => {
         {/* Professional Context */}
         <div className="professional-context">
           <div className="context-card">
+            <div className="context-icon">
+              <Icon name="database" />
+            </div>
             <h3>Current Role</h3>
             <p>
               <strong>Data Analyst at Tetratech</strong>
@@ -190,6 +282,9 @@ const DataAnalysisPage = () => {
             </p>
           </div>
           <div className="context-card">
+            <div className="context-icon">
+              <Icon name="target" />
+            </div>
             <h3>Impact Focus</h3>
             <p>
               <strong>Mission-Critical Analytics</strong>
@@ -315,7 +410,8 @@ const DataAnalysisPage = () => {
           </p>
           <div className="cta-buttons">
             <a href="/contact" className="btn primary">
-              Discuss Your Project
+              <span>Discuss Your Project</span>
+              <Icon name="arrowRight" />
             </a>
             <a href="/portfolio" className="btn secondary">
               View All Work

@@ -22,8 +22,16 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    sans-serif;
   overflow-x: hidden;
   line-height: 1.6;
   color: var(--text-color);
@@ -94,7 +102,7 @@ img {
   align-items: center;
   flex-direction: column;
   margin: 0;
-  padding: 0;
+  padding: 0 1.5rem;
   animation: fadeIn 1s ease-in;
 }
 
@@ -122,6 +130,7 @@ img {
   font-weight: 100;
   margin: 0.5rem 0 1.5rem;
   font-size: 1.5rem;
+  max-width: 600px;
 }
 
 .name {
@@ -232,17 +241,6 @@ img {
   display: inline-block;
   font-weight: 500;
   font-size: 2rem;
-}
-
-.bottom-half h1::after,
-.bottom-half h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  height: 3px;
-  width: 60px;
-  background-color: var(--accent-color);
 }
 
 .tech-cards {
@@ -372,7 +370,27 @@ img {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  padding: 0 4rem;
   color: var(--accent-color);
+}
+.stack-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--accent-color);
+  padding-left: 4rem;
+}
+#stack {
+  margin-top: 2rem;
+}
+#stack-icon {
+  font-size: 2.5rem;
+}
+
+.stack-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-left: 4rem;
 }
 
 /* Professional Highlights */
@@ -393,7 +411,6 @@ img {
   background: rgba(255, 255, 255, 0.05);
   padding: 2rem;
   border-radius: 12px;
-  border-left: 4px solid var(--accent-color);
 }
 
 .highlight-header {
@@ -752,17 +769,6 @@ img {
   text-align: center;
   position: relative;
   display: inline-block;
-}
-
-.headr::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 70px;
-  height: 3px;
-  background-color: var(--accent-color);
 }
 
 .contact-form {
