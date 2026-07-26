@@ -55,7 +55,7 @@ const PortfolioPage = () => {
       description:
         "A Japanese SRS app covering 1,841 kanji, 214 radicals, and vocabulary across 212 frequency-ordered sets. Custom scheduling system, prerequisite gating, and a session flow I designed from scratch.",
       // [SCREENSHOT: GlyphStack dashboard showing SRS breakdown bar, review count, streak, and tier progress]
-      imageUrl: "/img/glyphstackapp.png",
+      imageUrl: "/img/glyphstack.png",
       linkTo: "/glyphstack",
       altText: "GlyphStack Japanese learning app",
       className: "web-apps",
@@ -66,8 +66,8 @@ const PortfolioPage = () => {
       description:
         "A follow-up to GlyphStack focused on the engine layer. Takes Anki deck imports, maps frequency data from corpora, and gates cards behind prerequisite kanji.",
       // [SCREENSHOT: Synapse card view showing locked card with prerequisite kanji blocking it]
-      imageUrl: "/img/designs.png",
-      linkTo: "#",
+      imageUrl: "/img/synapse.png",
+      linkTo: "/synapse",
       altText: "Synapse SRS engine",
       className: "web-apps",
       technologies: ["FastAPI", "SQLite", "Vanilla JS"],
@@ -170,7 +170,6 @@ const PortfolioPage = () => {
             Web development, with some design and photography on the side.
           </p>
         </div>
-
         {/* Professional Highlights */}
         <div className="professional-highlights">
           <h2 className="section-title">Professional Experience</h2>
@@ -189,7 +188,6 @@ const PortfolioPage = () => {
             ))}
           </div>
         </div>
-
         {/* Portfolio Grid */}
         <div className="portfolio-section">
           <h2 className="section-title">Featured Projects</h2>
@@ -209,32 +207,103 @@ const PortfolioPage = () => {
             ))}
           </div>
         </div>
-
         {/* Skills Summary */}
         <div className="skills-summary">
-          <h2 className="section-title">Stack</h2>
+          <div className="skills-summary-header">
+            <h2 className="section-title">Tech Stack & Tools</h2>
+            <p className="skills-summary-subtitle">
+              Technologies, frameworks, and creative software I work with across web development, data analysis, and media production.
+            </p>
+          </div>
 
           <div className="stack-grid">
-            <div className="stack-block">
-              <h3 className="stack-title">Front End</h3>
-              <div className="stack-list">
-                <i className="stack-icon devicon-html5-plain colored"></i>
-                <i className="stack-icon devicon-css3-plain colored"></i>
-                <i className="stack-icon devicon-javascript-plain colored"></i>
-                <i className="stack-icon devicon-react-original colored"></i>
+            {[
+              {
+                title: "Front End",
+                subtitle: "UI & Interactive Web",
+                skills: [
+                  { name: "React", iconClass: "devicon-react-original colored" },
+                  { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
+                  { name: "Vite", iconClass: "devicon-vitejs-plain colored" },
+                  { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-plain colored" },
+                  { name: "HTML5", iconClass: "devicon-html5-plain colored" },
+                  { name: "CSS3", iconClass: "devicon-css3-plain colored" },
+                  { name: "Sass", iconClass: "devicon-sass-original colored" },
+                ],
+              },
+              {
+                title: "Back End & Cloud",
+                subtitle: "APIs, Engines & Storage",
+                skills: [
+                  { name: "Python", iconClass: "devicon-python-plain colored" },
+                  { name: "FastAPI", iconClass: "devicon-fastapi-plain colored" },
+                  { name: "Node.js", iconClass: "devicon-nodejs-plain colored" },
+                  { name: "Express", iconClass: "devicon-express-original" },
+                  { name: "Supabase", iconClass: "devicon-supabase-plain colored" },
+                  { name: "SQLite", iconClass: "devicon-sqlite-plain colored" },
+                ],
+              },
+              {
+                title: "Data & Analytics",
+                subtitle: "Reporting & Automation",
+                skills: [
+                  { name: "Power BI", isPowerBI: true },
+                  { name: "Python Scripts", iconClass: "devicon-python-plain colored" },
+                  { name: "SharePoint", iconClass: "devicon-windows8-original colored" },
+                ],
+              },
+              {
+                title: "Testing & Tooling",
+                subtitle: "QA & Development Workflow",
+                skills: [
+                  { name: "Vitest", iconClass: "devicon-vitest-plain colored" },
+                  { name: "Git", iconClass: "devicon-git-plain colored" },
+                  { name: "Vite", iconClass: "devicon-vitejs-plain colored" },
+                ],
+              },
+              {
+                title: "Creative & Design",
+                subtitle: "3D, Visual & Motion Design",
+                skills: [
+                  { name: "Blender", iconClass: "devicon-blender-original colored" },
+                  { name: "Photoshop", iconClass: "devicon-photoshop-plain colored" },
+                  { name: "After Effects", iconClass: "devicon-aftereffects-plain colored" },
+                  { name: "Illustrator", iconClass: "devicon-illustrator-plain colored" },
+                  { name: "Figma", iconClass: "devicon-figma-plain colored" },
+                  { name: "Lightroom", isLightroom: true },
+                ],
+              },
+            ].map((block, idx) => (
+              <div key={idx} className="stack-block">
+                <div className="stack-block-header">
+                  <h3 className="stack-title">{block.title}</h3>
+                  <span className="stack-category-subtitle">{block.subtitle}</span>
+                </div>
+                <div className="stack-list">
+                  {block.skills.map((skill, sIdx) => (
+                    <div key={sIdx} className="stack-badge">
+                      {skill.isPowerBI ? (
+                        <svg className="stack-icon custom-svg" viewBox="0 0 24 24" fill="none">
+                          <path d="M7 13H10V20H7V13Z" fill="#F2C811"/>
+                          <path d="M11 9H14V20H11V9Z" fill="#F2C811"/>
+                          <path d="M15 4H18V20H15V4Z" fill="#F2C811"/>
+                        </svg>
+                      ) : skill.isLightroom ? (
+                        <svg className="stack-icon custom-svg" viewBox="0 0 24 24">
+                          <rect width="24" height="24" rx="4" fill="#001E36" />
+                          <text x="4" y="16" fill="#31A8FF" fontSize="11" fontWeight="bold" fontFamily="sans-serif">Lr</text>
+                        </svg>
+                      ) : (
+                        <i className={`stack-icon ${skill.iconClass}`}></i>
+                      )}
+                      <span>{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="stack-block">
-              <h3 className="stack-title">Back End</h3>
-              <div className="stack-list">
-                <i className="stack-icon devicon-nodejs-plain colored"></i>
-                <i className="stack-icon devicon-express-original"></i>
-                <i className="stack-icon devicon-mongodb-plain colored"></i>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="portfolio-cta">
           <h2>Ready to collaborate?</h2>
