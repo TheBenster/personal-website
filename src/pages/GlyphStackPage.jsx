@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import MediaShowcase from "../components/MediaShowcase";
 import "../styles/project-page.css";
 
 const GlyphStackPage = () => {
@@ -23,6 +24,44 @@ const GlyphStackPage = () => {
 
   const stack = ["React", "Vite", "Tailwind", "Supabase"];
 
+  // Showcase media items (GIFs, short videos, or static images)
+  // Drop your GIF files in public/img/ and update the `src` paths below!
+  const showcaseMedia = [
+    {
+      id: "minigame",
+      title: "Minigame Gameplay",
+      tag: "Gameplay Loop",
+      // Add your minigame GIF or video path here:
+      src: "/gifs/glyphstack_minigame.gif",
+      poster: "/img/glyphstack.png",
+      caption: "Kanji matching & timing minigame integrated directly into review sessions.",
+      type: "gif",
+      aspectRatio: "16/9",
+    },
+    {
+      id: "quiz-loop",
+      title: "Quiz Loop",
+      tag: "Review Flow",
+      // Add your quiz loop GIF or video path here:
+      src: "/gifs/glyphstack_quizloop.gif",
+      poster: "/img/glyphstack.png",
+      caption: "Fast, uninterrupted SRS quiz session flow with immediate feedback and prerequisite gating.",
+      type: "gif",
+      aspectRatio: "16/9",
+    },
+    {
+      id: "layout-design",
+      title: "Design System & Style Tile",
+      tag: "Style Tile",
+      // Add your design system PNG path here:
+      src: "/img/glyphstack_design_system.png",
+      poster: "/img/glyphstack_design_system.png",
+      caption: "Light & Dark mode palette swatches, Nunito & Japanese CJK typography, and SRS stage progression.",
+      type: "image",
+      aspectRatio: "16/9",
+    },
+  ];
+
   return (
     <section id="project-page">
       <div className="project-container">
@@ -44,6 +83,11 @@ const GlyphStackPage = () => {
               </span>
             ))}
           </div>
+        </div>
+
+        {/* Media Showcase */}
+        <div className="project-section">
+          <MediaShowcase items={showcaseMedia} title="Visual Showcase & Gameplay" />
         </div>
 
         {/* Why */}

@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/portfolio-page.css";
 
 const PortfolioItem = ({
   title,
   imageUrl,
+  hoverGif,
   linkTo,
   altText,
   className = "",
@@ -11,13 +13,20 @@ const PortfolioItem = ({
   external = false,
   technologies = [],
 }) => {
+  const [isHovered, setIsHovered] = useState(false);
   const ItemWrapper = external ? "a" : Link;
   const linkProps = external
     ? { href: linkTo, target: "_blank", rel: "noopener noreferrer" }
     : { to: linkTo };
 
+  const currentSrc = isHovered && hoverGif ? hoverGif : imageUrl;
+
   return (
-    <div className={`portfolio-item ${className}`}>
+    <div
+      className={`portfolio-item ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="portfolio-item-header">
         <h3 className="portfolio-item-title">{title}</h3>
         <p className="portfolio-item-description">{description}</p>
@@ -25,7 +34,8 @@ const PortfolioItem = ({
 
       <ItemWrapper {...linkProps} className="portfolio-item-link">
         <div className="portfolio-image-container">
-          <img className="port" src={imageUrl} alt={altText} />
+          <img className="port" src={currentSrc} alt={altText} />
+          {hoverGif && <span className="gif-preview-badge">GIF</span>}
           <div className="portfolio-overlay">
             <div className="portfolio-overlay-content">
               <span className="view-project">
