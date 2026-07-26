@@ -11,6 +11,7 @@ import DesignsPage from "./pages/DesignsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import DataAnalysisPage from "./pages/DataAnalysisPage";
 import GlyphStackPage from "./pages/GlyphStackPage";
+import SynapsePage from "./pages/SynapsePage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="designs" element={<DesignsPage />} />
         <Route path="data-analysis" element={<DataAnalysisPage />} />
         <Route path="glyphstack" element={<GlyphStackPage />} />
+        <Route path="synapse" element={<SynapsePage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
