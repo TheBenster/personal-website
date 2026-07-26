@@ -369,8 +369,6 @@ img {
 .section-title {
   font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 2rem;
-  padding: 0 4rem;
   color: var(--accent-color);
 }
 .stack-title {
