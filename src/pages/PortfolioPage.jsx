@@ -224,7 +224,7 @@ const PortfolioPage = () => {
                 skills: [
                   { name: "React", iconClass: "devicon-react-original colored" },
                   { name: "JavaScript", iconClass: "devicon-javascript-plain colored" },
-                  { name: "Vite", iconClass: "devicon-vitejs-plain colored" },
+                  { name: "Vite", iconClass: "devicon-vite-original colored" },
                   { name: "Tailwind CSS", iconClass: "devicon-tailwindcss-plain colored" },
                   { name: "HTML5", iconClass: "devicon-html5-plain colored" },
                   { name: "CSS3", iconClass: "devicon-css3-plain colored" },
@@ -258,7 +258,7 @@ const PortfolioPage = () => {
                 skills: [
                   { name: "Vitest", iconClass: "devicon-vitest-plain colored" },
                   { name: "Git", iconClass: "devicon-git-plain colored" },
-                  { name: "Vite", iconClass: "devicon-vitejs-plain colored" },
+                  { name: "Vite", iconClass: "devicon-vite-original colored" },
                 ],
               },
               {
